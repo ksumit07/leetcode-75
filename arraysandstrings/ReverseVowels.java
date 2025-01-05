@@ -19,7 +19,6 @@ public class ReverseVowels {
             }
         }
         return new String(chArr);
-
     }
 
     private static boolean isVowel(char ch) {
