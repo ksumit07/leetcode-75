@@ -1,4 +1,8 @@
-class ReverseVowels {
+package arraysandstrings;
+
+import java.util.*;
+
+public class ReverseVowels {
     public String reverseVowels(String s) {
         char[] chArr = s.toCharArray();
         int l = 0;
@@ -19,8 +23,18 @@ class ReverseVowels {
     }
 
     private static boolean isVowel(char ch) {
-        return ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'I' || ch == 'i' || ch == 'o' || ch == 'O'
-                || ch == 'U' || ch == 'u';
+        Set<Character> hashSet = new HashSet<>();
+        hashSet.add('a');
+        hashSet.add('A');
+        hashSet.add('e');
+        hashSet.add('E');
+        hashSet.add('i');
+        hashSet.add('I');
+        hashSet.add('o');
+        hashSet.add('O');
+        hashSet.add('u');
+        hashSet.add('U');
+        return hashSet.contains(ch);
     }
 
     private static void swap(char[] chArr, int l, int r) {
